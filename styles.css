@@ -684,8 +684,8 @@ nav {
 }
 
 .contact-item i {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: var(--gray-bg);
     border-radius: 50%;
     display: flex;
@@ -717,7 +717,7 @@ nav {
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
 }
 
 label {
@@ -755,7 +755,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -1052,6 +1052,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
