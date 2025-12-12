@@ -25,7 +25,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--text-color);
     background-color: var(--light-bg);
     overflow-x: hidden;
@@ -1052,5 +1052,6 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
