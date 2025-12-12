@@ -364,21 +364,17 @@ nav {
     padding: 0 2rem;
 }
 
-.about-text {
-    flex: 1;
-}
-
 .about-image {
-    flex: 1;
+    flex: 1 1 300px;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transform: rotate(3deg);
-    transition: var(--transition);
+    transition: transform 0.8s ease-in-out;
 }
 
+/* Rotate 360 degrees on hover */
 .about-image:hover {
-    transform: rotate(0);
+    transform: rotate(360deg);
 }
 
 .about-image img {
@@ -1056,3 +1052,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
