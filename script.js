@@ -272,6 +272,43 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 emailInput.placeholder = 'Your email address';
             }, 3000);
+            
+            document.addEventListener("DOMContentLoaded", () => {
+    const stats = document.querySelectorAll(".stat-number");
+    const statsSection = document.querySelector(".stats-container");
+    let animated = false;
+
+    function animateStats() {
+        if (animated) return;
+
+        const sectionTop = statsSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 100) {
+            stats.forEach(stat => {
+                const target = +stat.getAttribute("data-count");
+                let count = 0;
+                const increment = target / 100;
+
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(count);
+                    }
+                }, 20);
+            });
+
+            animated = true;
+        }
+    }
+
+    window.addEventListener("scroll", animateStats);
+    animateStats(); // run once in case already visible
+});
         });
     }
 });
+
